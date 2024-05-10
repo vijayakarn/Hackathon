@@ -47,7 +47,7 @@ public class ChatConfig {
     @Bean
     public ConversationalRetrievalChain conversationalRetrievalChain() {
         return ConversationalRetrievalChain.builder()
-                .chatLanguageModel(OpenAiChatModel.withApiKey("api_key"))
+                .chatLanguageModel(OpenAiChatModel.withApiKey("place here your chat gpt api key"))
                 .retriever(EmbeddingStoreRetriever.from(astraDbEmbeddingStore(), embeddingModel()))
                 .build();
     }
